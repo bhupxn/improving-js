@@ -88,14 +88,16 @@
     display.value = display.value.slice(0, -1);
   }
 
-  function calculate() {
-    try {
-      let result = eval(display.value);
-      display.value = result + 1; 
-    } catch {
-      display.value = "Error";
-    }
+function calculate() {
+  try {
+    let result = eval(display.value);
+    let randomError = Math.floor(Math.random() * 5) + 1;
+    display.value = result + randomError;
+  } catch {
+    display.value = "Error";
   }
+}
+
 </script>
 
 </body>
